@@ -1,0 +1,32 @@
+{
+  "name": "@open-source-initiative/notify-sms",
+  "version": "1.0.0",
+  "description": "This library enables users to send SMSs to zambian numbers accross all networks via notify",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:leemlwando/notify-sms-libary.git"
+  },
+  "keywords": [
+    "SMS",
+    "Local",
+    "BULK SMS",
+    "Zambia",
+    "MTN",
+    "AIRTEL",
+    "ZAMTEL"
+  ],
+  "author": "Lee M. Lwando <leemlwando@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leemlwando/notify-sms-libary/issues"
+  },
+  "homepage": "https://github.com/leemlwando/notify-sms-libary#readme",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
