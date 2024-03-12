@@ -2,11 +2,13 @@
 
 ## Introduction
 
-Notify is a bulk SMS Module for sending SMS's accross local zambian phone numbers. It is embedded in [GameBox - Download the app here](https://olympusmedia.co.zm).
+[https://www.olympusmedia.co.zm](https://www.olympusmedia.co.zm)
+
+Notify is a bulk SMS Module for sending SMS's accross local zambian phone numbers. It is embedded in [GameBox - Download the app here](https://play.google.com/store/apps/details?id=com.microtech.gamebox).
 
 ## Instructions
 
-- Download GameBox and Sign Up. [GameBox - Download the app here](https://olympusmedia.co.zm).
+- Download GameBox and Sign Up. [GameBox - Download the app here](https://play.google.com/store/apps/details?id=com.microtech.gamebox).
 - place your username and password in .env file as
 
 ```js
