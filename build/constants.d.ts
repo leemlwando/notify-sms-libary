@@ -1,0 +1,6 @@
+export declare const MAX_SMS_LENGTH = 159;
+export declare const MIN_SMS_LENGTH = 3;
+export declare const NOTIFY_RECIEPIENT_TYPE_CUSTOM = "NOTIFY_RECIEPIENT_TYPE_CUSTOM";
+export declare const NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP = "NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP";
+export declare const NOTIFY_RECIEPIENT_TYPE_CHANNEL = "NOTIFY_RECIEPIENT_TYPE_CHANNEL";
+//# sourceMappingURL=constants.d.ts.map

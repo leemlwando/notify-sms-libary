@@ -19,7 +19,7 @@ NOTIFY_SMS_PASSWORD="***********"
 - use the library as follows:
 
 ```js
-import * as SMS from '@open-source-initiative@notify-sms';
+import { SMS } from '@open-source-initiative/notify-sms';
 
 //or
 //const SMS  = require('mosi/sms');
@@ -58,6 +58,17 @@ const sendSMSToMyContacts = async () => {
     const smsResponse = await SMS.SEND_SMS_TO_CUSTOM_CONTACTS({ contacts: [ '2609xxxxxxxx' ], senderId: "644316912beefb5376aa11f2", message: 'Notify SMS::Test Message::Hello Zambia!!!' });
 }
 
+```
+
+## TEST YOUR CONNECTION
+
+Answer the prompts:
+
+ - Enter Login Credentials
+ - Enter Test Numbers
+
+```sh
+    node node_modules/@open-source-initiative/notify-sms/build/testMe.js --terminal
 ```
 
 ## Support The MicroTech OpenSource Initiative

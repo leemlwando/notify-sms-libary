@@ -7,12 +7,12 @@ import { NOTIFY_RECIEPIENT_TYPE_CHANNEL, NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP, N
 /**
  * Represents an SMS object used for sending SMS messages.
  */
-class SMS {
+export class SMSClass {
 
     private username: string;
     private password: string;
     private accessToken?: string;
-    private static instance: SMS;
+    private static instance: SMSClass;
 
     /**
      * Creates an instance of the SMS class.
@@ -117,11 +117,11 @@ class SMS {
         this.password = password;
     }
 
-    public static getInstance(credentials: { username: string, password: string }): SMS {
-        if (!SMS.instance) {
-            SMS.instance = new SMS(credentials);
+    public static getInstance(credentials: { username: string, password: string }): SMSClass {
+        if (!SMSClass.instance) {
+            SMSClass.instance = new SMSClass(credentials);
         }
-        return SMS.instance;
+        return SMSClass.instance;
     }
 
 
@@ -132,4 +132,4 @@ if(!process.env.NOTIFY_SMS_USERNAME || !process.env.NOTIFY_SMS_PASSWORD) {
     console.warn("[Notify SMS]::Please set process.env.NOTIFY_SMS_USERNAME and process.env.NOTIFY_SMS_PASSWORD in your .env file");
 }
 
-export default SMS.getInstance({ username: process.env.NOTIFY_SMS_USERNAME as string, password: process.env.NOTIFY_SMS_PASSWORD as string });
+export const SMS = SMSClass.getInstance({ username: process.env.NOTIFY_SMS_USERNAME as string, password: process.env.NOTIFY_SMS_PASSWORD as string });
