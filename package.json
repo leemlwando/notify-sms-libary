@@ -1,6 +1,6 @@
 {
   "name": "@open-source-initiative/notify-sms",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This library enables users to send SMSs to zambian numbers accross all networks via notify",
   "main": "./build/index",
   "scripts": {
