@@ -132,4 +132,4 @@ if(!process.env.NOTIFY_SMS_USERNAME || !process.env.NOTIFY_SMS_PASSWORD) {
     console.warn("[Notify SMS]::Please set process.env.NOTIFY_SMS_USERNAME and process.env.NOTIFY_SMS_PASSWORD in your .env file");
 }
 
-export const SMS = SMSClass.getInstance({ username: process.env.NOTIFY_SMS_USERNAME as string, password: process.env.NOTIFY_SMS_PASSWORD as string });
+export const SMS: SMSClass = SMSClass.getInstance({ username: process.env.NOTIFY_SMS_USERNAME as string, password: process.env.NOTIFY_SMS_PASSWORD as string });
