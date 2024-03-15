@@ -65,7 +65,7 @@ var constants_1 = require("./constants");
 var sendSMS = function (_a, _b) { return __awaiter(void 0, [_a, _b], void 0, function (_c, _d) {
     var data, axiosResponse, error_1;
     var reciepientType = _c.reciepientType, channel = _c.channel, contactGroup = _c.contactGroup, senderId = _c.senderId, message = _c.message, contacts = _c.contacts;
-    var URL = _d.URL, ACCESS_TOKEN = _d.ACCESS_TOKEN;
+    var URL = _d.URL, ACCESS_TOKEN = _d.ACCESS_TOKEN, useSenderIdName = _d.useSenderIdName;
     return __generator(this, function (_e) {
         switch (_e.label) {
             case 0:
@@ -83,6 +83,9 @@ var sendSMS = function (_a, _b) { return __awaiter(void 0, [_a, _b], void 0, fun
                         break;
                     default:
                         throw "Invalid reciepient type";
+                }
+                if (useSenderIdName) {
+                    URL = URL + "&useSenderIdName=yes";
                 }
                 return [4 /*yield*/, (0, axios_1.default)({
                         method: 'POST',

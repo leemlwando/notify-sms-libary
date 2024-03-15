@@ -6,7 +6,7 @@ import { NOTIFY_RECIEPIENT_TYPE_CHANNEL, NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP, N
  */
 export type ISendSMS = (
     args: { reciepientType: string; channel?: string; contactGroup?: string, senderId?: string; message: string; contacts?: string[] },
-    configs: { URL: string; ACCESS_TOKEN: string }
+    configs: { URL: string; ACCESS_TOKEN: string, useSenderIdName?: boolean }
 ) => Promise<{
     success: boolean;
     message?: string;
@@ -25,7 +25,7 @@ export type ISendSMS = (
  */
 export const sendSMS: ISendSMS = async (
     { reciepientType, channel, contactGroup, senderId, message, contacts },
-    { URL, ACCESS_TOKEN }
+    { URL, ACCESS_TOKEN, useSenderIdName }
 ) => {
     try {
 
@@ -43,6 +43,10 @@ export const sendSMS: ISendSMS = async (
                 break;
             default:
                 throw "Invalid reciepient type";
+        }
+
+        if(useSenderIdName){
+            URL = URL + `&useSenderIdName=yes`;
         }
 
         let axiosResponse = await axios({

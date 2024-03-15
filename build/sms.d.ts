@@ -61,6 +61,8 @@ export declare class SMSClass {
         contactGroup?: string;
         senderId: string;
         message: string;
+    }, options?: {
+        useSenderIdName?: boolean;
     }): Promise<{
         success: boolean;
         message?: string | undefined;

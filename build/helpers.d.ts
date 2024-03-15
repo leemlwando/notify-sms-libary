@@ -11,6 +11,7 @@ export type ISendSMS = (args: {
 }, configs: {
     URL: string;
     ACCESS_TOKEN: string;
+    useSenderIdName?: boolean;
 }) => Promise<{
     success: boolean;
     message?: string;

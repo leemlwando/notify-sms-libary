@@ -172,8 +172,8 @@ var SMSClass = /** @class */ (function () {
             });
         });
     };
-    SMSClass.prototype.SEND_SMS_TO_CONTACT_GROUP = function (_a) {
-        return __awaiter(this, arguments, void 0, function (_b) {
+    SMSClass.prototype.SEND_SMS_TO_CONTACT_GROUP = function (_a, options_1) {
+        return __awaiter(this, arguments, void 0, function (_b, options) {
             var contactGroup = _b.contactGroup, senderId = _b.senderId, message = _b.message;
             return __generator(this, function (_c) {
                 if (!this.accessToken)
@@ -183,7 +183,7 @@ var SMSClass = /** @class */ (function () {
                         contactGroup: contactGroup,
                         senderId: senderId,
                         message: message
-                    }, { URL: configs_1.SEND_SMS_API, ACCESS_TOKEN: this.accessToken })];
+                    }, __assign({ URL: configs_1.SEND_SMS_API, ACCESS_TOKEN: this.accessToken }, options))];
             });
         });
     };

@@ -94,14 +94,14 @@ export class SMSClass {
     }
 
 
-    public async SEND_SMS_TO_CONTACT_GROUP({contactGroup, senderId, message}: { contactGroup?: string, senderId: string, message: string}) {
+    public async SEND_SMS_TO_CONTACT_GROUP({contactGroup, senderId, message}: { contactGroup?: string, senderId: string, message: string}, options?: { useSenderIdName?: boolean }) {
         if(!this.accessToken) throw "Access token not set";
         return sendSMS({
             reciepientType: NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP,
             contactGroup,
             senderId,
             message
-        }, { URL: SEND_SMS_API, ACCESS_TOKEN: this.accessToken });
+        }, { URL: SEND_SMS_API, ACCESS_TOKEN: this.accessToken, ...options });
     }
 
     /** UTILS */
