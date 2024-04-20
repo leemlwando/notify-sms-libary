@@ -31,10 +31,13 @@ export class SMSClass {
      * @returns {Promise<string | null>} A promise that resolves to the access token or null if the configuration fails.
      */
     public async configureAccessToken(): Promise<string | null> {
+
         let accessToken = await getAccessToken({
             username: this.username, 
             password: this.password
         }, { URL: GET_ACCESS_TOKEN_API });
+
+        console.log('[getAccessToken]::',accessToken)
 
         if(accessToken.success && accessToken?.payload?.token) {
             this.accessToken = accessToken.payload.token;
