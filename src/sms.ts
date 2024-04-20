@@ -9,6 +9,7 @@ import { NOTIFY_RECIEPIENT_TYPE_CHANNEL, NOTIFY_RECIEPIENT_TYPE_CONTACT_GROUP, N
  */
 export class SMSClass {
 
+    public debug = false;
     private username: string;
     private password: string;
     private accessToken?: string;
@@ -115,6 +116,10 @@ export class SMSClass {
     public setCredentials({username, password}: {username: string, password: string}) {
         this.username = username;
         this.password = password;
+    }
+
+    public setDebug(debug: boolean){
+        this.debug = debug;
     }
 
     public static getInstance(credentials: { username: string, password: string }): SMSClass {
