@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/leemlwando/notify-sms-library#readme",
   "dependencies": {
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "typescript": "^5.4.2"
